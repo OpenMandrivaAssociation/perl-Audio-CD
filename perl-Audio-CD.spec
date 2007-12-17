@@ -13,7 +13,6 @@ License:	GPL
 Group:		Sound
 BuildRequires:	libcdaudio-devel
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 This module was created for adding CDDB support to Xmms::shell and cd
