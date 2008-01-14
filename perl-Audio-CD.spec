@@ -1,7 +1,7 @@
 %define real_name Audio-CD
 %define name perl-%{real_name}
 %define version 0.05
-%define release %mkrel 7
+%define release %mkrel 8
 
 Name:		%{name}
 Version:	%{version}
