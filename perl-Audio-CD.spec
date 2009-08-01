@@ -1,19 +1,19 @@
-%define real_name Audio-CD
-%define name perl-%{real_name}
-%define version 0.05
-%define release %mkrel 10
+%define upstream_name    Audio-CD
+%define upstream_version 0.05
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Perl interface to libcdaudio
-Source:		%{real_name}-%{version}.tar.bz2
-URL:		http://home.wanadoo.nl/jano/disc-cover.html
 License:	GPL
 Group:		Sound
+Url:		http://home.wanadoo.nl/jano/disc-cover.html
+Source0:	%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	libcdaudio-devel
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module was created for adding CDDB support to Xmms::shell and cd
@@ -25,7 +25,7 @@ NOTE: This version has been altered by J.I. van Hemert
 start with the original package if you wish to develop something.
 
 %prep
-%setup -q -n %{real_name}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -46,4 +46,3 @@ chmod 644 README
 %{perl_vendorarch}/Audio
 %{perl_vendorarch}/auto/Audio
 %{_mandir}/*/*
-
