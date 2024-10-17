@@ -8,7 +8,7 @@ Release:	6
 Summary:	Perl interface to libcdaudio
 License:	GPL
 Group:		Sound
-Url:		http://home.wanadoo.nl/jano/disc-cover.html
+Url:		https://home.wanadoo.nl/jano/disc-cover.html
 Source0:	%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	libcdaudio-devel
